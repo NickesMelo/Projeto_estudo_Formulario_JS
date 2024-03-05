@@ -71,5 +71,21 @@ function validarCor() {
     }
 }
 
+function validarCheckboxComida() {
+    const checkedbox = document.querySelectorAll('.checkbox');
+    let comidaSelecionada = false;
+
+    checkedbox.forEach(function (input) {
+        if (input.checked) {
+            comidaSelecionada = true;
+        }
+        
+        if (!comidaSelecionada) {
+            alert('Selecione pelo menos uma comida favorita');
+        } else {
+            console.log('Comida seleciona:' + comidaSelecionada);
+        }
+    })
+}
 
 fomulario.addEventListener('submit', validarFomulario);
