@@ -1,4 +1,4 @@
-const fomulario = document.querySelector('#form-grup');
+const formulario = document.querySelector('#form-grup');
 
 function validarFomulario(evento) {
     evento.preventDefault();
@@ -7,18 +7,21 @@ function validarFomulario(evento) {
     const sobrenome = document.querySelector('#sobrenome').value;
 
     /*Validação do nome com regex*/
-    if (validarNome(nome)) {
-        console.log("Nome válido!");
-    } else {
-        alert("Nome inválido!");
-    }
+    // if (validarNome(nome)) {
+    //     console.log("Nome válido!");
+    // } else {
+    //     alert("Nome inválido!");
+    // }
 
-    /*Validação do sobrenome com regex*/
-    if (validarSobrenome(sobrenome)) {
-        console.log("Sobrenome válido!");
-    } else {
-        alert("Sobrenome inválido!");
-    }
+    // /*Validação do sobrenome com regex*/
+    // if (validarSobrenome(sobrenome)) {
+    //     console.log("Sobrenome válido!");
+    // } else {
+    //     alert("Sobrenome inválido!");
+    // }
+    // validarSexo()
+    // validarDataNascimento()
+    validarCor()
 }
 
 function validarNome(nome) {
@@ -62,13 +65,21 @@ function validarDataNascimento() {
 }
 
 function validarCor() {
-    const cor = document.querySelector('#cor-favorita').value;
-    const preto = '#000000';
-    if (cor === preto) {
-        alert('Selecione uma cor diferente do preto');
-    } else {
-        console.log('Cor selecionada:' + cor);
-    }
+    const btnCor = document.querySelector('.btn-cor-favorita');
+    const labelCor = document.querySelector('#label-cor');
+    
+    btnCor.addEventListener('click', function() {
+        btnCor.classList.remove('cor-favorita');
+        btnCor.remove();
+
+        const inputCor = document.createElement('input');
+        inputCor.setAttribute('type', 'color');
+        inputCor.setAttribute('id', 'cor-favorita-selecionada');
+
+        labelCor.insertAdjacentElement('beforeend', inputCor);
+        // btnCor.insertAdjacentElement('afterbegin', inputCor)
+
+    });
 }
 
 function validarCheckboxComida() {
@@ -158,4 +169,4 @@ function pesquisacep(valor) {
 };
 /*Fechando a validação do CEP*/
 
-fomulario.addEventListener('submit', validarFomulario);
+formulario.addEventListener('submit', validarFomulario);
