@@ -35,4 +35,21 @@ function validarSobrenome(sobrenome) {
     return regexSobrenome.test(sobrenome);
 }
 
+function validarSexo() {
+    const inputsSexo = document.querySelectorAll('.sexo');
+    let sexoSelecionado = false;
+
+    inputsSexo.forEach(function (input) {
+        if (input.checked) {
+            sexoSelecionado = true;
+        }
+    })
+    //Verifica se input está marcado
+    if (!sexoSelecionado) {
+        alert('Selecione o campo sexo.');
+    } else {
+        console.log('Campo sexo selecionado.')
+    }
+}
+
 fomulario.addEventListener('submit', validarFomulario);
