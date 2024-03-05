@@ -61,4 +61,15 @@ function validarDataNascimento() {
     }
 }
 
+function validarCor() {
+    const cor = document.querySelector('#cor-favorita').value;
+    const preto = '#000000';
+    if (cor === preto) {
+        alert('Selecione uma cor diferente do preto');
+    } else {
+        console.log('Cor selecionada:' + cor);
+    }
+}
+
+
 fomulario.addEventListener('submit', validarFomulario);
