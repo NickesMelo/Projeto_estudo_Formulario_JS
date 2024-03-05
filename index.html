@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Fomulário para estudo com Java Script</title>
+</head>
+
+<body>
+
+    <div id="container-general">
+        <h1>Arena de Treinamento</h1>
+        <div id="botoes-de-cima">
+            <button>Clique aqui</button>
+            <button>De novo</button>
+            <button>E de novo</button>
+            <button>Mais uma vez</button>
+            <button>Agora é sério</button>
+            <button>Só desta vez</button>
+            <button>Falta só essa</button>
+            <button>E essa</button>
+            <button>Acabou!</button>
+        </div>
+            
+        <main>
+            <form method="get" action="." id="form-grup">
+                <h2>Teste o formulário</h2>
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" maxlength="10" required>
+
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" placeholder="Digite seu sobrenome" maxlength="15" required>
+
+                <label for="cep">CEP:</label>
+                <input type="number" name="cep" id="cep" value="" size="10" maxlength="9"
+                onblur="pesquisacep(this.value)" placeholder="0000000" maxlength="8">
+
+                <label>Rua:</label> 
+                <input name="rua" type="text" id="rua" size="60" required>
+                <label>Bairro:</label>
+                <input name="bairro" type="text" id="bairro" size="40" required>
+                <label>Cidade:</label>
+                <input name="cidade" type="text" id="cidade" size="40" required>
+                <label>Estado:</label>
+                <input name="uf" type="text" id="uf" size="2" required>
+                <label>IBGE:</label>
+                <input name="ibge" type="text" id="ibge" size="8" />
+
+                <hr id="hr-form">
+
+                <label for="sexo">Sexo:</label>
+                <label for="masculino">Masculino</label>
+                <input type="radio" class="sexo" id="masculino" name="sexo" value="Masculino">
+                <label for="feminino">Feminino</label>
+                <input type="radio" class="sexo" id="feminino" name="sexo" value="Feminino">
+                
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" name="data-nascimento" id="data-nascimento" required>
+
+                <label for="cor-favorita">Cor:</label>
+                <input type="color" name="cor-favorita" id="cor-favorita">
+
+                <hr id="hr-form">
+
+                <label for="">Comida favorita:</label>
+                <label for="carne">Carne</label>
+                <input class="checkbox" type="checkbox" name="carne" id="carne">
+                <label for="frango">Frango</label>
+                <input class="checkbox" type="checkbox" name="frango" id="frango">
+                <label for="pizza">Pizza</label>
+                <input class="checkbox" type="checkbox" name="pizza" id="pizza">
+                <label for="vegetariano">Vegetariano</label>
+                <input class="checkbox" type="checkbox" name="vegetariano" id="vegetariano">
+                <label for="carnivoro">Carnívoro</label>
+                <input class="checkbox" type="checkbox" name="carnivoro" id="carnivoro">
+                <label for="nao-como">Não como</label>
+                <input class="checkbox" type="checkbox" name="nao-como" id="nao-como">
+
+                <hr id="hr-form">
+
+                <label for="escolaridade">Escolaridade</label>
+                <select name="escoladade" id="escolaridade">
+                    <option value="">-- Selecione --</option>
+                    <option value="semFormacao">Sem formação</option>
+                    <option value="fundamentalCompleto">Primário (completo)</option>
+                    <option value="fundamentalIncompleto">Primário (incompleto)</option>
+                    <option value="medioCompleto">Médio (completo)</option>
+                    <option value="medioIncompleto">Médio (incompleto)</option>
+                    <option value="superiorCompleto">Superior (completo)</option>
+                    <option value="superiorIncompleto">Superior (incompleto)</option>
+                    <option value="especializacao">Especialização</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="tecnicoSuperior">Téc. Superior</option>
+                    <option value="mestrado">Mestrado</option>
+                    <option value="doutorado">Doutorado</option>
+                </select>
+
+                <label for="escolaridade">Profissão:</label>
+                <select name="escoladade" id="escolaridade">
+                    <option value="">-- Selecione --</option>
+                    <option value="pedreiro">Pedreiro</option>
+                    <option value="gari">Gari</option>
+                    <option value="jornaleiro">Jornaleiro</option>
+                    <option value="médico">Médico</option>
+                    <option value="advogado">Advogado</option>
+                    <option value="enfermeiro">Enfermeiro</option>
+                    <option value="TI">TI</option>
+                    <option value="mecânico">Mecânico</option>
+                    <option value="professor">Professor</option>
+                    <option value="nutrição">Nutrição</option>
+                    <option value="fisioterapia">Fisioterapia</option>
+                    <option value="vasp">Vasp</option>
+                </select>
+
+                <label for="pets">Pets:</label>
+                <select name="pets" id="pets">
+                    <option value="">-- Selecione --</option>
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                    <option value="periquito">Periquito</option>
+                    <option value="cobra">Cobra</option>
+                    <option value="rato">Rato</option>
+                </select>
+
+                <hr id="hr-form">
+
+                <label for="esportes">Pratica Esportes?</label>
+                <select name="esportes" id="esportes" size="3">
+                    <option value="1">Natação</option>
+                    <option value="2">Futebol</option>
+                    <option value="3">Corrida</option>
+                    <option value="4">Karatê</option>
+                    <option value="5">Capoeira</option>
+                    <option value="6">Musculação</option>
+                    <option value="7">Não sei o que é esporte!</option>
+                </select>
+
+                <label for="esportes">Pratica Esportes?</label>
+                <select name="esportes" id="esportes" size="3">
+                    <option value="1">Natação</option>
+                    <option value="2">Futebol</option>
+                    <option value="3">Corrida</option>
+                    <option value="4">Karatê</option>
+                    <option value="5">Capoeira</option>
+                    <option value="6">Musculação</option>
+                    <option value="7">Não sei o que é esporte!</option>
+                </select>
+
+                <hr id="hr-form">
+
+                <label for="sugestoes">Sugestões:</label>
+                <textarea name="sugestoes" id="sugestoes" cols="30" rows="3"
+                    placeholder="Digite sua sugestão"></textarea>
+
+                <hr id="hr-form">
+
+                <table id="tabela" cellspacing="1">
+                    <caption>Tabela com título aleatório</caption>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Escolaridade</th>
+                            <th>Botao</th>
+                            <th>Checkbox</th>
+                            <th>Radio</th>
+                            <th>Input</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Francisco</td>
+                            <td>Superior</td>
+                            <td><button>Clique aqui</button></td>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>Maria</td>
+                            <td>Doutorado</td>
+                            <td><button>Clique aqui</button></td>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>Matheus</td>
+                            <td>Mestrado</td>
+                            <td><button>Clique aqui</button></td>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>Lucas</td>
+                            <td>Doutorado</td>
+                            <td><button>Clique aqui</button></td>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>Laura</td>
+                            <td>Superior</td>
+                            <td><button>Clique aqui</button></td>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="6" id="tebela-rodape">Rodapé da tabela aleatória</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div id="botoes-de-baixo">
+                    <button type="submit">Cadastrar formulário</button>
+                    <button>Alert</button>
+                    <button>Confirm</button>
+                    <button>Prompt</button>
+                    <button>Elemento externo</button>
+                    <button>Mais uma clicada</button>
+                    <button>Termine aqui!</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
