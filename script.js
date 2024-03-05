@@ -52,4 +52,13 @@ function validarSexo() {
     }
 }
 
+function validarDataNascimento() {
+    const data = document.querySelector('#data-nascimento')
+    if (data === '') {
+        alert('Informe a data de nascimento');
+    } else {
+        console.log('Data de Nascimento Selecionada.')
+    }
+}
+
 fomulario.addEventListener('submit', validarFomulario);
